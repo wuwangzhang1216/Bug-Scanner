@@ -1,0 +1,76 @@
+{
+  "name": "npm-malicious-scanner",
+  "version": "2.0.0",
+  "description": "Enterprise-grade NPM security scanner for detecting supply chain attacks and malicious packages",
+  "main": "npm-scanner.js",
+  "bin": {
+    "npm-scanner": "./cli.js",
+    "nscan": "./cli.js",
+    "npm-malicious-scanner": "./cli.js"
+  },
+  "scripts": {
+    "start": "node npm-scanner.js",
+    "scan": "node npm-scanner.js",
+    "scan:current": "node npm-scanner.js .",
+    "scan:verbose": "DEBUG=* node npm-scanner.js",
+    "test": "node test.js",
+    "lint": "echo 'No linting configured yet'",
+    "update-threats": "node update-threat-db.js"
+  },
+  "keywords": [
+    "npm",
+    "security",
+    "scanner",
+    "malware",
+    "supply-chain",
+    "vulnerability",
+    "audit",
+    "malicious-packages",
+    "security-scanner",
+    "npm-audit",
+    "dependency-check",
+    "threat-detection",
+    "2025-september-attack"
+  ],
+  "author": "Security Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/npm-malicious-scanner"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/npm-malicious-scanner/issues"
+  },
+  "homepage": "https://github.com/yourusername/npm-malicious-scanner#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "inquirer": "^8.2.6",
+    "ora": "^5.4.1",
+    "figlet": "^1.6.0",
+    "boxen": "^5.1.2",
+    "cli-table3": "^0.6.3",
+    "gradient-string": "^2.0.2",
+    "cli-progress": "^3.12.0",
+    "open": "^8.4.2"
+  },
+  "devDependencies": {},
+  "preferGlobal": true,
+  "files": [
+    "cli.js",
+    "npm-scanner.js",
+    "update-threat-db.js",
+    "lib/",
+    "README.md",
+    "LICENSE"
+  ],
+  "config": {
+    "maxScanDepth": 5,
+    "maxFileSize": 1048576,
+    "threatDatabaseUrl": "https://api.npmjs.org/security/advisories"
+  }
+}

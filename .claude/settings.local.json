@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node npm-scanner.js --help)",
+      "Bash(node npm-scanner.js .)",
+      "Bash(npm install)",
+      "Bash(node cli.js --help)",
+      "Bash(npm link:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
